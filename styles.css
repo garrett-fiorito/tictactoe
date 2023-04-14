@@ -1,0 +1,41 @@
+/* Customizing Bootstrap theme */
+:root {
+    --bs-bg: #000;
+    --bs-primary: #fff;
+  }
+  
+  body {
+    background-color: var(--bs-bg);
+    color: var(--bs-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    margin: auto;
+    text-align: center;
+  }
+  
+  #game-board {
+    border-collapse: collapse;
+    border: 5px solid var(--bs-primary);
+  }
+  
+  #game-board td {
+    width: 100px;
+    height: 100px;
+    border: 2px solid var(--bs-primary);
+    text-align: center;
+    vertical-align: middle;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  #game-board td[data-value]::before {
+    content: attr(data-value);
+  }
+  
+  
